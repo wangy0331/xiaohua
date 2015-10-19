@@ -17,6 +17,8 @@ public class ImageActivity extends Activity {
 	private ImageView imageView;
 	
 	private PhotoViewAttacher attacher;
+	
+	private boolean mIsWaitDoubleClick = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +39,7 @@ public class ImageActivity extends Activity {
 			public void onLoadingComplete(String arg0, View arg1, Bitmap arg2) {
 				attacher = new PhotoViewAttacher(imageView); 
 				attacher.update();
-				attacher.setOnPhotoTapListener(onClick);  
+				attacher.setOnViewTapListener(onClick1);
 			}
 
 			@Override
@@ -62,10 +64,13 @@ public class ImageActivity extends Activity {
 		
 	}
 	
-	PhotoViewAttacher.OnPhotoTapListener onClick = new PhotoViewAttacher.OnPhotoTapListener()  {
-		 @Override  
-	       public void onPhotoTap(View view, float x, float y) {  
-	           finish();  
-	       }  
+	
+	PhotoViewAttacher.OnViewTapListener onClick1 = new PhotoViewAttacher.OnViewTapListener() {
+		
+		@Override
+		public void onViewTap(View arg0, float arg1, float arg2) {
+			 finish();  
+		}
 	};
+	
 }
