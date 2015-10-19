@@ -18,8 +18,6 @@ public class ImageActivity extends Activity {
 	
 	private PhotoViewAttacher attacher;
 	
-	private boolean mIsWaitDoubleClick = false;
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -72,5 +70,6 @@ public class ImageActivity extends Activity {
 			 finish();  
 		}
 	};
+	
 	
 }

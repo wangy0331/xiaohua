@@ -38,6 +38,9 @@
             android:name=".ImageActivity"
             >
         </activity>
+        <activity 
+            android:name=".GifActivity"
+            ></activity>
     </application>
 
 </manifest>

@@ -1,6 +1,7 @@
 package com.test.xiaohualist.adapter;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.test.xiaohualist.activity.GifActivity;
 import com.test.xiaohualist.activity.ImageActivity;
 import com.test.xiaohualist.activity.R;
 import com.test.xiaohualist.bean.Xiaohua;
@@ -50,9 +51,19 @@ public class XiaohuaAdapter extends ArrayAdapter<Xiaohua> {
 			public void onClick(View v) {
 				ImageLoader.getInstance().getMemoryCache();
 				Log.d("TAG_URL", String.valueOf(xiaohua.getImage()));
-				Intent intent = new Intent(getContext(), ImageActivity.class);
-				intent.putExtra("image_url", xiaohua.getImage());
-				getContext().startActivity(intent);
+				String path = xiaohua.getImage();
+				String type = path.substring(path.lastIndexOf(".")+1);
+				Log.d("TYPE" , type);
+				
+				if ("gif".equals(type)) {
+					Intent intent = new Intent(getContext(), GifActivity.class);
+					intent.putExtra("image_url", xiaohua.getImage());
+					getContext().startActivity(intent);
+				} else {
+					Intent intent = new Intent(getContext(), ImageActivity.class);
+					intent.putExtra("image_url", xiaohua.getImage());
+					getContext().startActivity(intent);
+				}
 			}
 		});
 
@@ -60,4 +71,7 @@ public class XiaohuaAdapter extends ArrayAdapter<Xiaohua> {
 
 		return view;
 	}
+	
+	
+	
 }
