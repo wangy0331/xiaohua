@@ -29,13 +29,7 @@ public class HttpService {
 	public static String get(String url,int page) {
 		String result = null;
 		String httpArg = String.format("page=%s", page);
-//		if (page == 0) {
-//			
-//		} else {
-//			
-//		}
 		url = url + "?" + httpArg;
-		
 		
 		try {
 			HttpClient httpClient = new DefaultHttpClient();

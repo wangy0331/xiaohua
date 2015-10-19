@@ -85,22 +85,6 @@ public class MainActivity extends Activity {
 		
 		listView.addFooterView(button);
 		
-//		View viewImage =  LayoutInflater.from(this).inflate(R.layout.xiaohua_item, null);
-//		
-//		Log.d("TAG" ,String.valueOf(viewImage.findViewById(R.id.image)));
-//		
-//		ImageView imageView = (ImageView) viewImage.findViewById(R.id.image);
-//		
-//		imageView.setOnClickListener(new View.OnClickListener() {
-//			
-//			@Override
-//			public void onClick(View v) {
-//				Log.d("TAG" ,"---------------------");
-//				   Intent intent = new Intent(MainActivity.this, LoadingActivity.class);
-//				   startActivity(intent);
-//			}
-//		});
-		
 		adapter = new XiaohuaAdapter(MainActivity.this);
 		
 	}

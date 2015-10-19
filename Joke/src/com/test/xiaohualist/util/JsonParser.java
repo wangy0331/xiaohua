@@ -8,8 +8,6 @@ import com.test.xiaohualist.bean.Xiaohua;
 
 public class JsonParser {
 	
-	private static String imageUri = "http://pica.nipic.com/2007-11-09/200711912453162_2.jpg";
-	
 	public static List<Xiaohua> parseJSONWithJSONObject(String response) {
 		List<Xiaohua> list = null;
 		try {

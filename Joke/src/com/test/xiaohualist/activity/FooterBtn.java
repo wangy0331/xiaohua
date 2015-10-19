@@ -14,9 +14,7 @@ public class FooterBtn extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.footer);
-		
 		button = (Button) findViewById(R.id.footer_btn);
-		
 	}
 
 }
