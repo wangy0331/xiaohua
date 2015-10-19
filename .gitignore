@@ -1,0 +1,8 @@
+!.gitignore
+bin/
+gen/
+CVS/
+proguard/
+!*.jar
+!*.so
+.settings/
