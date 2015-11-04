@@ -44,6 +44,7 @@ public class XiaohuaAdapter extends ArrayAdapter<Xiaohua> {
 		} else {
 			xiaohuaImage.setVisibility(View.GONE);
 		}
+		
 
 		xiaohuaImage.setOnClickListener(new View.OnClickListener() {
 
